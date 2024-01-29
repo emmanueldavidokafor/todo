@@ -3,10 +3,10 @@ import React from 'react';
 
 const TaskList = ({ tasks, deleteTask, toggleTaskCompletion }) => {
   return (
-    <div className='note'>
+    <div className='w-100'>
       <ul className='note-container'>
       {tasks.map(task => (
-        <li key={task.id}>
+        <li key={task.id} className='note'>
           <input
             type="checkbox"
             checked={task.completed}
