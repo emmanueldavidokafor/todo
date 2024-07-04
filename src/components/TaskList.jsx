@@ -1,5 +1,6 @@
 // TaskList.js
 import React from 'react';
+import DeleteIcon from '@mui/icons-material/Delete';
 
 const TaskList = ({ tasks, deleteTask, toggleTaskCompletion }) => {
   return (
@@ -15,7 +16,7 @@ const TaskList = ({ tasks, deleteTask, toggleTaskCompletion }) => {
           <span style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
             {task.text}
           </span>
-          <button onClick={() => deleteTask(task.id)}>Delete</button>
+          <button onClick={() => deleteTask(task.id)}><DeleteIcon /> </button>
         </li>
       ))}
     </ul>
